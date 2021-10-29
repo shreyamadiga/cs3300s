@@ -32,7 +32,7 @@ group :production do
 end
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-
+gem 'mini_racer'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -43,6 +43,12 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'sqlite3'
+  gem 'rspec-rails', '~> 3.7'
+end
+
+group :development, :test do
+  gem 'capybara'
+  gem 'selenium-webdriver'
 end
 
 group :development do
