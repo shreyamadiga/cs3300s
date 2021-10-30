@@ -19,7 +19,7 @@
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep
-
+echo coverage >> .gitignore
 /node_modules
 /yarn-error.log
 coverage/
