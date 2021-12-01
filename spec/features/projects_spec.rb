@@ -1,5 +1,16 @@
 require 'rails_helper'
-require 'rails_helper'
+def new_admin
+  visit root_path
+  click_link 'Sign up'
+  within("form")do
+    fill_in "Email", with: "testing@test.com"
+    fill_in "Password", with: "123456"
+    fill_in "Password confirmation", with: '123456'
+    click_button "Sign up"
+  end
+end
+
+
 
 RSpec.feature "Projects", type: :feature do
   context "Create new project" do

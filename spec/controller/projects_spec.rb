@@ -8,6 +8,20 @@ RSpec.describe ProjectsController, type: :controller do
       expect(response).to be_success
     end
   end
+  def new_user
+    user= FactoryBot.create(:user)
+    login_as(user)
+  end
+  def new_user
+    visit root_path
+    click_link 'Sign up'
+    within("form")do
+    fill_in "Email", with: "testing@test.com"
+    fill_in "Password", with: "123456"
+    fill_in "Password confirmation", with: '123456'
+    click_button "Sign up"
+  end
+end
 
   context "GET #show" do
     let!(:project) { Project.create(title: "Test title", description: "Test description") }
