@@ -1,40 +1,5 @@
 
-<p id="notice"><%= notice %></p>
-<li class = "nav-item">
-          <%= link_to 'Sign in' , new_admin_session_path, class: 'nav-link' %>
-          </li>
-          <li class = "nav-item">
-          <%= link_to 'Sign Up' , new_admin_registration_path, class: 'nav-link' %>
-          </li>
-          <li class = "nav-item">
-          <%= link_to 'Sign Out' , destroy_admin_session_path,method: :delete, class: 'nav-link' %>
-          </li>
-<h1>Projects</h1>
 
-<table class = "table">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-  
-  <table tbody>
-    <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.title %></td>
-        <td><%= project.description %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-<%= link_to 'New Project', new_project_path %>
 <p id="notice"><%= notice %></p>
 
 <h1>Projects</h1>
