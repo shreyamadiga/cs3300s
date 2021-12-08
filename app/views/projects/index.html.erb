@@ -12,7 +12,7 @@
     </tr>
   </thead>
   
-  <tbody>
+  <table tbody>
     <% @projects.each do |project| %>
       <tr>
         <td><%= project.title %></td>
@@ -27,3 +27,28 @@
 
 <br>
 <%= link_to 'New Project', new_project_path %>
+<p id="notice"><%= notice %></p>
+
+<h1>Projects</h1>
+
+
+<div class="container">
+<!-- Example row of columns -->
+<div class="row mb-5">
+  <div class="col-md-4">
+    <h2>arduino-device</h2>
+    <p>created a device to focus on thee women security with the help of arduino</p>
+    <form class="button_to" method="get" action="/projects/3"><input class="btn btn-secondary" type="submit" value="See More »" /></form>
+  </div>
+  <div class="col-md-4">
+  <h2>ruby and rails</h2>
+    <p>created a website to show the number of projects that i have done.</p>
+    <form class="button_to" method="get" action="/projects/12"><input class="btn btn-secondary" type="submit" value="See More »" /></form>
+  </div>
+  <div class="col-md-4">
+  <h2>brain tumor classification</h2>
+    <p>Created a project using the matlab which potentially aims at scaning the reports and finding if the tumor is present or not</p>
+    <form class="button_to" method="get" action="/projects/13"><input class="btn btn-secondary" type="submit" value="See More »" /></form>
+  </div>
+</div>
+
