@@ -2,28 +2,31 @@
 
 <h1>Projects</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.title %></td>
-        <td><%= project.description %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="container">
+<!-- Example row of columns -->
 
+  <div class="col-md-4">
+  <h2>arduino-device</h2>
+    <p>created a device to focus on thee women security with the help of arduino</p>
+    <form class="button_to" method="get" action="/projects/3"><input class="btn btn-secondary" type="submit" value="See More »" /></form>
+    <a href="/admins/sign_in">Edit</a> | 
+    <a href="/admins/sign_in">Delete</a>
+    </div>
+  
+
+
+
+</div> <!-- /container -->
 <br>
+  </main>
+  <hr>
+  </div>
+    <footer class="container text-center">
+    <p>shreya madiga | 636-735-1767| shreyamadiga@gmail.com</p>
+  </footer>
+  </body>
+</html>
 
-<%= link_to 'New Project', new_project_path %>
+
+
