@@ -1,19 +1,31 @@
+<html>
+  <head>
+    <title>Cs3300s</title><p id="notice"><%= notice %></p>
 
-
-
-<p id="notice"><%= notice %></p>
-
-<h1>Projects</h1>
-
-
-<div class="container">
-<!-- Example row of columns -->
-<div class="row mb-5">
-  
-
-
-
-<div class="col-md-4">
+    <h1>Projects</h1>
+    
+    <table class = "table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        <% @projects.each do |project| %>
+          <tr>
+            <td><%= project.title %></td>
+            <td><%= project.description %></td>
+            <td><%= link_to 'Show', project %></td>
+            <td><%= link_to 'Edit', edit_project_path(project) %></td>
+            <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <div class="col-md-4">
     <h2>arduino-device</h2>
     <p>created a device to focus on thee women security with the help of arduino</p>
     <form class="button_to" method="get" action="/projects/8"><input class="btn btn-secondary" type="submit" value="See More »" /></form>
@@ -21,6 +33,7 @@
   <div class="col-md-4">
   <h2>ruby and rails</h2>
     <p>created a website to show the number of projects that i have done.</p>
+    <form class="button_to" method="delete" link_to 'Destroy' action="/projects/9"><input class="btn btn-secondary" type="submit" value="delete »" /></form>
     <form class="button_to" method="get" action="/projects/9"><input class="btn btn-secondary" type="submit" value="See More »" /></form>
   </div>
   <div class="col-md-4">
@@ -37,11 +50,10 @@
       <h2>Business classification model for X airlines</h2>
           <p>	Developed business model for a mock airline company</p>
           <form class="button_to" method="get" action="/projects/12"><input class="btn btn-secondary" type="submit" value="See More »" /></form>
+          <form class="button_to" method="destroy" link_to 'Destroy' action="/projects/12"><input class="btn btn-secondary" type="submit" value="delete »" /></form>
           </div>
           <div class="col-md-4">
           
 
 
     </div>
-
-
