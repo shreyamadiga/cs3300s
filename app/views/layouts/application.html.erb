@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
   <head>
     <title>Cs3300s</title>
@@ -9,7 +8,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
  
-  
+  <body>
+  </nav>
+
+
+  </nav>
   <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
@@ -23,13 +26,13 @@
           <a class="nav-link active" aria-current="page" href="/#">Home</a>
         </li>
        
-          <div class="navbar-nav ml-auto">
-          <form class="form-inline" method="get" action="/admins/sign_in"><input class="btn btn-outline-primary" type="submit" value="Login"></form>
-          
-          <div style="padding-left: 10px;">
-          <form class="form-inline" method="get" action="/admins/sign_up"><input class="btn btn-outline-success" type="submit" value="Sign Up"></form>
-          </div>
-          </div>
+        <div id="wrap">
+<main role="main" id="main">
+<p id="notice"></p>
+
+
+
+        
         
          
           
@@ -51,4 +54,16 @@
 
  <%= yield %>
   </body>
+</html>
+
+
+</div> <!-- /container -->
+<br>
+</main>
+<hr>
+</div>
+  <footer class="container text-center">
+  <p>Shreya Madiga | 636-735-1767 | shreyamadiga@gmail.com</p>
+</footer>
+</body>
 </html>
