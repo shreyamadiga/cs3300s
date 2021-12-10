@@ -1,32 +1,29 @@
-<p id="notice"><%= notice %></p>
+<p class="navbar-text float-right">
+<% if user_signed_in? %>
+Logged in as <strong><%= current_user.email %></strong>.
+  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+<tr>
+<th>Title</th>
+<th>Description</th>
+<th colspan="10"></th>
+</tr>
+</thead>
 
-<h1>Projects</h1>
-
-
-<div class="container">
-<!-- Example row of columns -->
-
-  <div class="col-md-4">
-  <h2>arduino-device</h2>
-    <p>created a device to focus on thee women security with the help of arduino</p>
-    <form class="button_to" method="get" action="/projects/3"><input class="btn btn-secondary" type="submit" value="See More »" /></form>
-    <a href="/admins/sign_in">Edit</a> | 
-    <a href="/admins/sign_in">Delete</a>
-    </div>
-  
-
-
-
-</div> <!-- /container -->
-<br>
-  </main>
-  <hr>
-  </div>
-    <footer class="container text-center">
-    <p>shreya madiga | 636-735-1767| shreyamadiga@gmail.com</p>
-  </footer>
-  </body>
-</html>
-
-
-
+<table tbody>
+<% @projects.each do |project| %>
+<tr>
+  <td><%= project.title %></td>
+  <td><%= project.description %></td>
+  <td><%= link_to 'Show', project %></td>
+  <td><%= link_to 'Edit', edit_project_path(project) %></td>
+  <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>
+<% end %>
+</tbody>
+</table>
+<% else %>
+  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+<% end %>
+</p>

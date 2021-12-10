@@ -8,7 +8,20 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
- 
+  
+  <body>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">Shreya Madiga</a>
+    <div class="navbar-nav ml-auto">
+    <form class="form-inline" method="get" action="/projects/new"><input class="btn btn-outline-primary" type="submit" value="New Project" /></form>
+    <div style="padding-left: 10px;">
+    <form class="form-inline" method="get" action="/admins/edit"><input class="btn btn-outline-primary" type="submit" value="Edit Profile" /></form>
+    </div>
+    <div style="padding-left: 10px;">
+    <form class="form-inline" method="post" action="/admins/sign_out"><input type="hidden" name="_method" value="delete" /><input class="btn btn-outline-success" type="submit" value="Logout" /><input type="hidden" name="authenticity_token" value="1kwjOcFk9nNH0EfUStw9FVpUOn7_sPAMG_Ds12IG3GsSgF7G4AgcsAWrURRWiQAw_qNhrHkxq7NZPh1Vjn67cw" /></form>
+    </div>
+    </div>
+  </nav>
   <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
@@ -23,20 +36,9 @@
         </li>
        
       
-          
         
-          <li class = "nav-item">
-          <%= link_to 'Register' , new_admin_registration_path, class: 'nav-link' %>
-          </li>
-          <li class = "nav-item">
-          <%= link_to 'Sign in' , new_admin_session_path, class: 'nav-link' %>
-          </li>
-          <li class = "nav-item">
-          <%= link_to 'Sign Up' , new_admin_registration_path, class: 'nav-link' %>
-          </li>
-          <li class = "nav-item">
-          <%= link_to 'Sign Out' , destroy_admin_session_path,method: :delete, class: 'nav-link' %>
-          </li>
+        
+         
           
           
   
@@ -54,7 +56,7 @@
  
 
 
-
  <%= yield %>
   </body>
 </html>
+
