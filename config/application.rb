@@ -1,8 +1,7 @@
 require_relative 'boot'
 
-
 require 'rails/all'
-
+composer global require fxp/composer-asset-plugin --no-plugins
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
