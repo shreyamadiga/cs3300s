@@ -19,11 +19,43 @@ Logged in as <strong><%= current_user.email %></strong>.
   <td><%= link_to 'Edit', edit_project_path(project) %></td>
   <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 </tr>
+
+
+
 <% end %>
+
+<%= link_to 'New Project', new_project_path %>
+
 </tbody>
 </table>
 <% else %>
   <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
   <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-<% end %>
+  <div class="col-md-4">
+  <div>
+  <h2>ruby and rails</h2>
+    <p>	created a website to show the number of projects that i have done.</p>
+    <form class="button_to" method="get" action="/projects/12"><input class="btn btn-secondary" type="submit" value="See More »" /></form>
+    </div>
+    <div>
+    <h2> brain tumor classification</h2>
+    <p>used in classify the tumors from an xray developed from matlab	</p>
+    <form class="button_to" method="get" action="/projects/12"><input class="btn btn-secondary" type="submit" value="See More »" /></form>
+    </div>
+    <div>
+    <h2> Building CI/CD data pipelines</h2>
+    <p>Built CI/CD data pipeline for Video on Demand Feature for STB	</p>
+    <form class="button_to" method="get" action="/projects/12"><input class="btn btn-secondary" type="submit" value="See More »" /></form>
+    </div>
+    <div>
+    <h2> arduino device</h2>
+    <p>developed a arduino device using the c lang for self protection	</p>
+    <form class="button_to" method="get" action="/projects/12"><input class="btn btn-secondary" type="submit" value="See More »" /></form>
+    </div>
+
+
+
+
+
+  <% end %>
 </p>
