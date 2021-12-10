@@ -6,6 +6,7 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 
 module Cs3300s
+  RAILS_ENV=production bundle exec rake assets:precompile
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
